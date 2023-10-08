@@ -14,10 +14,40 @@
   "contributes": {
     "commands": [
       {
-        "command": "made-tokens.helloWorld",
-        "title": "Hello World"
+        "command": "made-tokens.activateMadeTokens",
+        "title": "Made Tokens - Activate"
+      },
+      {
+        "command": "made-tokens.madeSpace",
+        "title": "made-space: margin/padding/position"
+      },
+      {
+        "command": "made-tokens.madeSize",
+        "title": "made-size: width/height"
       }
-    ]
+    ],
+    "submenus": [
+      {
+        "id": "madeTokensContextMenu",
+        "label": "Made Tokens"
+      }
+    ],
+    "menus": {
+      "editor/context":  [
+        {
+          "submenu": "madeTokensContextMenu",
+          "group": "madeTokens"
+        }
+      ],
+      "madeTokensContextMenu": [
+        {
+          "command": "made-tokens.madeSpace"
+        },
+        {
+          "command": "made-tokens.madeSize"
+        }
+      ]
+    }
   },
   "scripts": {
     "vscode:prepublish": "npm run compile",
