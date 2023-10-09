@@ -1,6 +1,6 @@
 # made-tokens README
 
-This is the README for your extension "made-tokens". After writing up a brief description, we recommend including the following sections.
+This extension allows you to easily convert plain css values to made tokens with just a click.
 
 ## Features
 
